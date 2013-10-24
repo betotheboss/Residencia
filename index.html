@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Telmex | Servicios de Telefonía e Internet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Le JS -->
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/ladda.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/login.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="css/ladda.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="Scripts/html5shiv.js"></script>
+    <![endif]-->
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="form-signin">
+                <img src="img/logo.png">
+                <div id="form-signin">
+                    <input type="text" class="input-block-level" placeholder="Usuario" id="username" name="UserName">
+                    <input type="password" class="input-block-level" placeholder="Contraseña" id="password" name="Password">
+                    <button id="btnLogOn" class="btn btn-large btn-primary btn-block ladda-button zoom-out">
+                        <span class="ladda-label">Iniciar sesión</span>
+                        <span class="ladda-spinner"></span>
+                        <div class="ladda-progress" style="width: 0px;"></div>
+                    </button>
+                </div>
+
+                <div id="form-register" style="display: none">
+                    <input id="r-username" class="input-block-level" name="Username" type="text" placeholder="Usuario">
+                    <input id="r-email" class="input-block-level" name="Email" type="text" placeholder="Email">
+                    <input id="r-password" class="input-block-level" name="Password" type="text" placeholder="Contraseña">
+                    <input id="r-confirm" class="input-block-level" name="Confirm" type="text" placeholder="Confirma Contraseña">
+                    <button id="btnRegisterCancel" class="btn btn-inverse">Cancelar</button>
+                    <button id="btnRegisterSend" class="btn btn-success ladda-button zoom-out">
+                        <span class="ladda-label">Registrar</span>
+                        <span class="ladda-spinner"></span>
+                        <div class="ladda-progress" style="width: 0px;"></div>
+                    </button>
+                </div>
+
+                <div id="form-forgot" style="display: none">
+                    <input id="rec-email" class="input-block-level" name="Email" type="text" placeholder="Email">
+                    <button id="btnForgotCancel" class="btn btn-inverse">Cancelar</button>
+                    <button id="btnForgotSend" class="btn btn-danger ladda-button zoom-out">
+                        <span class="ladda-label">Recuperar</span>
+                        <span class="ladda-spinner"></span>
+                        <div class="ladda-progress" style="width: 0px;"></div>
+                    </button>
+                </div>
+            </div>
+            <div id="well" class="well well-small">
+                <p style="margin: 0">¿Todavía no tienes una cuenta? <strong><a id="btnRegister">¡Regístrese ahora!</a></strong></p>
+            </div>
+            <p id="copyright">&copy; Telmex | Servicios de Telefonía e Internet - <a id="btnForgot">¿Has olvidado tu contraseña?</a></p>
+        </div> <!-- /container -->
+
+        <script>
+            // Bind normal buttons
+            Ladda.bind( '.ladda-button', { timeout: 1000 } );
+        </script>
+
+    </body>
+</html>
